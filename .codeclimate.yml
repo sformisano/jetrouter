@@ -1,0 +1,35 @@
+---
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+      - javascript
+      - python
+      - php
+  fixme:
+    enabled: true
+  phpmd:
+    enabled: true
+    Controversial/Superglobals:
+      enabled: false
+    exclude_fingerprints:
+    - 04184a89cc95d4de27194c1bfae58468
+    - 113dfe251ce1988d4de94f4141f41267
+    - c994a1b3b901807afd4128bef6310a69
+    - d3f4156691d2262bda1a34326a6a2786
+    - 481ad10f1f811b709de0c99951196766
+    - 672a2e1ab76ccbf5bdc4fd80e17c21e1
+ratings:
+  paths:
+  - "**.inc"
+  - "**.js"
+  - "**.jsx"
+  - "**.module"
+  - "**.php"
+  - "**.py"
+  - "**.rb"
+exclude_paths:
+- tests/
+- vendor/

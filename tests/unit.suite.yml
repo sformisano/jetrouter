@@ -1,0 +1,31 @@
+# Codeception Test Suite Configuration
+#
+# Suite for unit (internal) tests.
+
+class_name: UnitTester
+modules:
+  enabled:
+    - Asserts
+    - \Helper\Unit
+    #- WPLoader # fixme this does not work with bedrock based installs for now...
+  config:
+    # fixme this does not work with bedrock based installs for now...
+    WPLoader:
+      wpRootFolder: "/srv/www/wp.dev/current/web/wp"
+      dbName: "wp_dev_development"
+      dbHost: "localhost"
+      dbUser: "wp_dev"
+      dbPassword: "wp_dbpassword"
+      wpDebug: true
+      dbCharset: "utf8"
+      dbCollate: ""
+      tablePrefix: "wptests_"
+      domain: "wp.dev"
+      adminEmail: "admin@wp.dev"
+      title: "WP Dev Test Site"
+      phpBinary: "php"
+      language: ""
+      configFile: ""
+      plugins: ['jetplugins/jetrouter.php']
+      activatePlugins: ['jetplugins/jetrouter.php']
+      booststrapActions: []

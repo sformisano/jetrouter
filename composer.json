@@ -1,0 +1,20 @@
+{
+  "name": "sformisano/jetrouter",
+  "description": "An intuitive WordPress router.",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Salvatore Formisano",
+      "email": "hello@salvatoreformisano.com"
+    }
+  ],
+  "require-dev": {
+    "codeception/codeception": "*",
+    "10up/wp_mock": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "JetRouter\\": "src"
+    }
+  }
+}
