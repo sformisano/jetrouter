@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/sformisano/jetrouter/badges/gpa.svg)](https://codeclimate.com/github/sformisano/jetrouter) [![Build Status](https://travis-ci.org/sformisano/jetrouter.svg?branch=master)](https://travis-ci.org/sformisano/jetrouter)
 
-This WordPress plugin adds a regular expression based router on top of the WordPress standard routing system. Any route declared through this router will take priority over standard WordPress urls.
+This WordPress plugin adds a regular expression based router on top of the WordPress standard routing system. Any route declared through this router will take priority over standard WordPress URLs.
 
 - [Installation](#installation)
 - [Usage](#usage)
