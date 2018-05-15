@@ -1,6 +1,4 @@
 # JetRouter - WordPress Routing, Fast & Easy
-
-![PHP 7.0+][php-image]
 [![Build Status](https://travis-ci.org/sformisano/jetrouter.svg?branch=master)](https://travis-ci.org/sformisano/jetrouter)
 [![Code Climate](https://codeclimate.com/github/sformisano/jetrouter/badges/gpa.svg)](https://codeclimate.com/github/sformisano/jetrouter)
 
