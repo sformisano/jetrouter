@@ -177,6 +177,10 @@ class RequestDispatcher
       isset($_GET['json']) ||
       $this->outputFormat === 'json' ||
       (
+          ! empty( $_SERVER['HTTP_ACCEPT'] ) &&
+          strtolower( $_SERVER['HTTP_ACCEPT'] ) == 'application/json'
+      ) ||
+      (
         ! empty( $_SERVER['HTTP_X_REQUESTED_WITH'] ) && 
         strtolower( $_SERVER['HTTP_X_REQUESTED_WITH'] ) == 'xmlhttprequest' &&
         $this->outputFormat !== 'html'
