@@ -1380,6 +1380,32 @@ class RouterTest extends \Codeception\Test\Unit{
     );
   }
 
+    function testHandlerReturningRespondToJsonToAcceptJson()
+    {
+      $_SERVER['HTTP_ACCEPT'] = 'application/json';
+
+      \WP_Mock::wpFunction( 'wp_send_json', array(
+        'times' => 1,
+        'return' => 'json data output',
+      ) );
+
+      $router = Router::create();
+
+      $router->get('users', 'get_users', function(){
+        return ['respond_to' => [
+          'json' => 'irrelevant data as wp_send_json return data is mocked above',
+          'html' => function(){
+            return 'users view loaded';
+          }
+        ]];
+      });
+
+      $this->assertEquals(
+        'json data output',
+        $router->dispatch('GET', 'users')
+      );
+    }
+
   function testHandlerReturningRespondToJsonToRequestWithJsonGetParam()
   {
     \WP_Mock::wpFunction( 'wp_send_json', array(
