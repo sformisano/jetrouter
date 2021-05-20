@@ -94,7 +94,7 @@ class RequestDispatcher
     }
 
     $output = $this->parseHandlerOutput(
-      call_user_func_array($route['routeHandler'], $route['routeArgs'])
+      call_user_func_array($route['routeHandler'], array_values($route['routeArgs']))
     );
 
     if( $this->shouldReturnJson() ){
