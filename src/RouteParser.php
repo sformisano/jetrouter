@@ -74,7 +74,7 @@ abstract class RouteParser
   {
     if( ! is_callable($handler) ){
       throw new Exception\InvalidRouteHandlerException(
-        "Invalid handler for '" . $this->name . "' route."
+        "Invalid route handle."
       );
     }
   }
